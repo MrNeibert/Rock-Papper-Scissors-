@@ -1,13 +1,5 @@
 const ChoicesList = ["rock", "papper", "scissors"];
 
-
-
-function getComputerChoice() {
-  ComputerChoice = ChoicesList[Math.floor(Math.random()*ChoicesList.length)];
-  console.log(ComputerChoice);
-  return ComputerChoice;
-}
-
 function getPlayerChoice ()
 {
   do {
@@ -18,20 +10,26 @@ function getPlayerChoice ()
       alert("Please pick a valid option!")  }
   }
   while (ChoicePlayer === -1);
-  ChoicePlayer = ChoicesList[ChoicePlayer]
+  return ChoicesList[ChoicePlayer]
 }
 
-function CheckWinner() {
-  if (ChoicePlayer === "rock" && ComputerChoice === "papper"){
-    alert(`You lose! You picked ${ChoicePlayer} and I played ${ComputerChoice}!`)
-  }else if (ChoicePlayer === "papper" && ComputerChoice === "scissors"){
-    alert(`You lose! You picked ${ChoicePlayer} and I played ${ComputerChoice}!`)
-  }else if (ChoicePlayer === "scissors" && ComputerChoice === "rock"){
-    alert(`You lose! You picked ${ChoicePlayer} and I played ${ComputerChoice}!`)
-  }else if (ChoicePlayer === ComputerChoice){
-    alert(`It's a Draw! We both picked ${ComputerChoice}!`)
+function getComputerChoice() {
+  randomPick = ChoicesList[Math.floor(Math.random()*ChoicesList.length)];
+  console.log(randomPick);
+  return randomPick;
+}
+
+function checkWinner(player, computer) {
+  if (player === "rock" && computer === "papper"){
+    alert(`You lose! You picked ${player} and I played ${computer}!`)
+  }else if (player === "papper" && computer === "scissors"){
+    alert(`You lose! You picked ${player} and I played ${computer}!`)
+  }else if (player === "scissors" && computer === "rock"){
+    alert(`You lose! You picked ${player} and I played ${computer}!`)
+  }else if (player === computer){
+    alert(`It's a Draw! We both picked ${player}!`)
   }else {
-    alert(`You win, congratulations! \nYou picked ${ChoicePlayer} and I played ${ComputerChoice}!`)
+    alert(`You win, congratulations! \nYou picked ${player} and I played ${computer}!`)
   }
 }
 
@@ -39,6 +37,6 @@ function CheckWinner() {
 
 
 
-getPlayerChoice();
-getComputerChoice();
-CheckWinner();
+let playerChoice = getPlayerChoice();
+let computerChoice = getComputerChoice();
+checkWinner(playerChoice,computerChoice);
