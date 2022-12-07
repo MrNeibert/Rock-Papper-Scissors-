@@ -73,14 +73,17 @@ body {
   margin: 30px;
 }
 
-.outputText {
+.outputBox {
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: aliceblue;
   border-radius: 2em;
   margin: 0px 40px;
   align-items: center;
+}
+
+#outputText {
+  background-color: aliceblue;
 }
 
 button {

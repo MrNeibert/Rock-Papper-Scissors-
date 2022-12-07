@@ -1,17 +1,15 @@
 const ChoicesList = ["rock", "papper", "scissors"];
+const buttons = document.querySelectorAll ('button');
 
-function getPlayerChoice ()
-{
-  do {
-    ChoicePlayer = prompt("What do you want to play? Rock, Papper or Scissors?");
-    ChoicePlayer = ChoicesList.indexOf(ChoicePlayer.toLowerCase());
-    console.log(ChoicePlayer);
-    if (ChoicePlayer === -1) {
-      alert("Please pick a valid option!")  }
-  }
-  while (ChoicePlayer === -1);
-  return ChoicesList[ChoicePlayer]
-}
+buttons.forEach((button) => {
+  button.addEventListener ('click',() => {
+    playerChoice = button.id;
+    let computerChoice = getComputerChoice();
+    checkWinner(playerChoice,computerChoice);
+  })
+});
+
+
 
 function getComputerChoice() {
   randomPick = ChoicesList[Math.floor(Math.random()*ChoicesList.length)];
@@ -32,11 +30,3 @@ function checkWinner(player, computer) {
     alert(`You win, congratulations! \nYou picked ${player} and I played ${computer}!`)
   }
 }
-
-
-
-
-
-let playerChoice = getPlayerChoice();
-let computerChoice = getComputerChoice();
-checkWinner(playerChoice,computerChoice);
