@@ -1,0 +1,102 @@
+body {
+  background-color:rgb(17, 22, 59);
+  font-family: "Roboto",  Open Sans, 'Helvetica Neue', sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin:0;
+  height: 100vh;
+  font-size: 18px;
+  flex: 1;
+}
+
+.topArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mainTittle {
+  display: flex;
+  background-color: aliceblue;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2em;
+  border-color: black;
+  border-style: dashed;
+  margin: 40px;
+  padding: 0px 20px;
+  height: 50px;
+  flex: 0 1 auto
+
+}
+
+#topText {
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2em;
+  border-color: black;
+  border-width: 2px;
+  margin: 30px;
+  border-style: dotted;
+}
+
+#gameArea {
+  background-color:rgb(143, 171, 212);
+  justify-content: space-between;
+  align-items: center;
+  flex: auto;
+  max-width: 100%;
+  border-radius: 2em;
+  margin: 20px;
+}
+
+.topCounters {
+  display: flex;
+  background-color: aliceblue;
+  justify-content: space-evenly;
+  align-items: center;
+  max-height: 50px;
+  margin: 20px;
+  padding: 0px;
+  border-radius: 2em;
+
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+}
+
+.outputText {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: aliceblue;
+  border-radius: 2em;
+  margin: 0px 40px;
+  align-items: center;
+}
+
+button {
+  background-color: rgb(17, 22, 59);
+  color: aliceblue;
+  border-color: aliceblue;
+  border-radius: 2em;
+  font-size: 24px;
+  text-align: center;
+  padding: 15px 32px;
+}
+
+#bottomArea {
+  background-color: rgba(0, 0, 0, 0.849);
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
