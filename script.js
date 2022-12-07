@@ -27,13 +27,11 @@ function getComputerChoice() {
 
 function checkWinner(player, computer) {
   let gameMsg = "";
-  if (player === "rock" && computer === "papper"){
+  if (player == "rock" && computer == "papper" ||
+      player == "papper" && computer == "scissors" ||
+      player == "scissors" && computer == "rock"){
     gameMsg = `You lose! You picked ${player} and I played ${computer}!`
-  }else if (player === "papper" && computer === "scissors"){
-    gameMsg = `You lose! You picked ${player} and I played ${computer}!`
-  }else if (player === "scissors" && computer === "rock"){
-    gameMsg =`You lose! You picked ${player} and I played ${computer}!`
-  }else if (player === computer){
+  }else if (player == computer){
     gameMsg = `It's a Draw! We both picked ${player}!`
   }else {
     gameMsg = `You win, congratulations! \nYou picked ${player} and I played ${computer}!`
