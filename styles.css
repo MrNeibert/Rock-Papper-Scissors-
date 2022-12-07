@@ -80,9 +80,10 @@ body {
   border-radius: 2em;
   margin: 0px 40px;
   align-items: center;
+  padding: 20px;
 }
 
-#outputText {
+.outputText {
   background-color: aliceblue;
 }
 
