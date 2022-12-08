@@ -73,6 +73,11 @@ body {
   margin: 30px;
 }
 
+.game p {
+  font-size: 36px;
+  paddi
+}
+
 .outputBox {
   text-align: center;
   border-radius: 2em;
